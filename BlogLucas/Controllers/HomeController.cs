@@ -16,16 +16,6 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         // // Criar Objetos
-        // Categoria tecnologia = new();
-        // tecnologia.Id = 1;
-        // tecnologia.Nome = "Tecnologia";
-
-        // Categoria ia = new()
-        // {
-        //     Id = 2,
-        //     Nome = "IA"
-        // };
-
         Categoria filmes = new(1, "Filmes");
 
         List<Postagem> postagens = [
@@ -68,13 +58,18 @@ public class HomeController : Controller
                 CategoriaId = 1,
                 Categoria = filmes,
                 DataPostagem = DateTime.Parse("29/06/2025"),
-                Descricao = "A bilheteria de Como Treinar o Seu Dragão recebe uma nova atualização - saiba mais.A bilheteria de Como Treinar o Seu Dragão recebe uma nova atualização - saiba mais.",
+                Descricao = "A bilheteria de Como Treinar o Seu Dragão recebe uma nova atualização - saiba mais",
                 Texto = "<strong>Como Treinar o Seu Dragão</strong>, sem muita surpresa, vem conquistando bons números de bilheteria para a Universal/Dreamworks.<br>Após três semanas em exibição, o filme agora soma <strong>US$ 450 milhões de dólares</strong> mundialmente. Vale lembrar que o filme custou US$ 150 milhões para ser produzido.",
                 Thumbnail = "/img/4.png",
                 Foto = "/img/4.png"
             }
         ];
         return View(postagens);
+    }
+
+    public IActionResult Postagem()
+    {
+        return View();
     }
 
     public IActionResult Privacy()
