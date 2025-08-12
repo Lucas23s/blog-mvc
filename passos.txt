@@ -6,8 +6,8 @@ git config --global user.email lucaseduardog48@gmail.com
 Listar os SDK
 dotnet --list-sdks
 
-Criando um projeto MVC
-dotnet new mvc -o BlogLucas
+// Criando um projeto MVC
+// dotnet new mvc -o BlogLucas
 
 Executar o projeto
 cd BlogLucas
